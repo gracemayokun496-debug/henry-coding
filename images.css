@@ -128,16 +128,16 @@ small {
     color: black;
 }
 
-.photos{
+.photos {
     margin-top: 50px;
     text-align: center;
 }
 
-.photos h3{
+.photos h3 {
     font-size: 25px;
 }
 
-.photos p{
+.photos p {
     font-size: 18px;
     color: #969393;
     margin-bottom: 20px;
@@ -156,4 +156,64 @@ small {
     height: 220px;
     object-fit: cover;
     border-radius: 0px;
+}
+.picture-gallery img.enlarged{
+    position: fixed;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 80%;
+}
+
+.picture-gallery img.enlarged:hover{
+    cursor: pointer;
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+body.blurred {
+    filter: blur(5px);
+}
+
+@media screen and (max-width:768px) {
+    body {
+        padding: 0px 10px;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero input {
+        width: 100%;
+    }
+
+    .cta-btn {
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .cta-btn a {
+        width: 100%;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 30px;
+        text-align: center;
+    }
+    .picture-gallery {
+        padding: 20px 0px;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr));
+    }
+
+    .picture-gallery img {
+        height: 200px;
+
+    }
 }
